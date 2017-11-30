@@ -20,7 +20,7 @@
       <x>10</x>
       <y>60</y>
       <width>781</width>
-      <height>151</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -98,7 +98,7 @@
      <property name="geometry">
       <rect>
        <x>670</x>
-       <y>101</y>
+       <y>50</y>
        <width>80</width>
        <height>31</height>
       </rect>
@@ -164,9 +164,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>190</y>
       <width>781</width>
-      <height>151</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -222,7 +222,7 @@
      </item>
      <item>
       <property name="text">
-       <string>JPG</string>
+       <string>APK</string>
       </property>
      </item>
     </widget>
@@ -236,7 +236,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>IP:</string>
+      <string>Url:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="ipText">
@@ -286,7 +286,7 @@
      <property name="geometry">
       <rect>
        <x>670</x>
-       <y>100</y>
+       <y>60</y>
        <width>80</width>
        <height>31</height>
       </rect>
@@ -300,9 +300,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>390</y>
+      <y>340</y>
       <width>781</width>
-      <height>191</height>
+      <height>241</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -323,6 +323,38 @@
      <property name="text">
       <string>目前规则</string>
      </property>
+    </widget>
+    <widget class="QPushButton" name="removeButton">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>200</y>
+       <width>80</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>REMOVE</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="ruleTable">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>620</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
     </widget>
    </widget>
    <widget class="QLabel" name="proxyTitle">
