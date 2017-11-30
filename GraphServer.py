@@ -8,6 +8,7 @@ class GraphServer(QDialog, Ui_MainWindow):
     def __init__(self, parent=None):
            super(GraphServer, self).__init__(parent)
            self.setupUi(self)
+           
 
 if __name__ == "__main__":
      import sys

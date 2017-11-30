@@ -14,13 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="RequestFrame">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>60</y>
       <width>781</width>
-      <height>161</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="methodSelect">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -64,17 +64,17 @@
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="urlText">
      <property name="geometry">
       <rect>
        <x>270</x>
        <y>50</y>
-       <width>113</width>
+       <width>161</width>
        <height>22</height>
       </rect>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_2">
+    <widget class="QComboBox" name="reqruleSelect">
      <property name="geometry">
       <rect>
        <x>520</x>
@@ -94,20 +94,20 @@
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="reqruleButton">
      <property name="geometry">
       <rect>
        <x>670</x>
-       <y>110</y>
+       <y>101</y>
        <width>80</width>
-       <height>22</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
       <string>ADD</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="requestTitle">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -120,7 +120,7 @@
       <string>请求规则添加</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="methodLabel">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -133,7 +133,7 @@
       <string>Method:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="urlLabel">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -146,21 +146,21 @@
       <string>Url:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="reqruleLable">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>480</x>
        <y>50</y>
        <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>Rule</string>
+      <string>Rule:</string>
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_2">
+   <widget class="QFrame" name="responseFrame">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -175,8 +175,128 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="responseTitle">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>响应规则添加</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="typeLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Type:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="typeSelect">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>60</y>
+       <width>79</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>APPLET</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DOC</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>JPG</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="ipLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>60</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IP:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ipText">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>60</y>
+       <width>161</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resruleLabel">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>60</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rule:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="resruleSelect">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>60</y>
+       <width>79</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>ALLOW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DENY</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="resruleButton">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>100</y>
+       <width>80</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ADD</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QFrame" name="frame_3">
+   <widget class="QFrame" name="ruleFrame">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -191,8 +311,21 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="ruleTitle">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>目前规则</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="proxyTitle">
     <property name="geometry">
      <rect>
       <x>320</x>
